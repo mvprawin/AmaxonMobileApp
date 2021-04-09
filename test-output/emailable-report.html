@@ -9,61 +9,30 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num attn">3</td><td class="num">0</td><td class="num">0</td><td class="num">31,271</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num attn">3</td><td class="num">0</td><td class="num">0</td><td class="num">1,178</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.qa.test.HomePageTest</td><td><a href="#m0">setUp</a></td><td rowspan="1">1606050417697</td><td rowspan="1">31196</td></tr><tr><th colspan="4">Default test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">com.qa.test.HomePageTest</td><td><a href="#m1">tearDown</a></td><td rowspan="1">1606050448954</td><td rowspan="1">-1606050448954</td></tr><tr><th colspan="4">Default test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="3">com.qa.test.HomePageTest</td><td><a href="#m2">cartValueTest</a></td><td rowspan="1">1606050448926</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m3">crmLogoImageTest</a></td><td rowspan="1">1606050448912</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m4">homePageTest</a></td><td rowspan="1">1606050448945</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.qa.test.HomePageTest</td><td><a href="#m0">setUp</a></td><td rowspan="1">1617993370953</td><td rowspan="1">1129</td></tr><tr><th colspan="4">Default test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="7">com.qa.test.HomePageTest</td><td><a href="#m1">setUp</a></td><td rowspan="3">1617993372096</td><td rowspan="3">-1617993372096</td></tr><tr class="skippedeven"><td><a href="#m2">setUp</a></td></tr><tr class="skippedeven"><td><a href="#m3">setUp</a></td></tr><tr class="skippedeven"><td><a href="#m4">tearDown</a></td><td rowspan="4">1617993372107</td><td rowspan="4">-1617993372107</td></tr><tr class="skippedeven"><td><a href="#m5">tearDown</a></td></tr><tr class="skippedeven"><td><a href="#m6">tearDown</a></td></tr><tr class="skippedeven"><td><a href="#m7">tearDown</a></td></tr><tr><th colspan="4">Default test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="3">com.qa.test.HomePageTest</td><td><a href="#m8">cartValueTest</a></td><td rowspan="1">1617993372104</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m9">crmLogoImageTest</a></td><td rowspan="1">1617993372097</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m10">homePageTest</a></td><td rowspan="1">1617993372110</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.qa.test.HomePageTest#setUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Cannot start the &apos;com.m.qr&apos; application. Visit https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md for troubleshooting. Original error: Error executing adbExec. Original error: &apos;Command &apos;&apos;D:\\Program Files\\Android\\asdk\\platform-tools\\adb.exe&apos; -P 5037 -s c1cbd64c shell am start -W -n com.m.qr/com.m.qr.activities.home.QRHomePageNew -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000&apos; exited with code 4294967295&apos;; Stderr: &apos;Security exception: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.m.qr/.activities.home.QRHomePageNew } from null (pid=22130, uid=2000) not exported from uid 10266
-
-java.lang.SecurityException: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.m.qr/.activities.home.QRHomePageNew } from null (pid=22130, uid=2000) not exported from uid 10266
-	at com.android.server.am.ActivityStackSupervisor.checkStartAnyActivityPermission(ActivityStackSupervisor.java:1630)
-	at com.android.server.am.ActivityStarter.startActivity(ActivityStarter.java:436)
-	at com.android.server.am.ActivityStarter.startActivityLocked(ActivityStarter.java:277)
-	at com.android.server.am.ActivityStarter.startActivityMayWait(ActivityStarter.java:829)
-	at com.android.server.am.ActivityManagerService.startActivityAndWait(ActivityManagerService.java:4710)
-	at com.android.server.am.ActivityManagerShellCommand.runStartActivity(ActivityManagerShellCommand.java:405)
-	at com.android.server.am.ActivityManagerShellCommand.onCommand(ActivityManagerShellCommand.java:141)
-	at android.os.ShellCommand.exec(ShellCommand.java:96)
-	at com.android.server.am.ActivityManagerService.onShellCommand(ActivityManagerService.java:15059)
-	at android.os.Binder.shellCommand(Binder.java:573)
-	at android.os.Binder.onTransact(Binder.java:473)
-	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:4256)
-	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:2983)
-	at android.os.Binder.execTransact(Binder.java:674)&apos;; Code: &apos;4294967295&apos; (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 19.88 seconds
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-PCEHKV8&apos;, ip: &apos;192.168.42.230&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
-Driver info: driver.version: AndroidDriver
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-PCEHKV8&apos;, ip: &apos;192.168.42.230&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:336)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:98)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:94)
-	at com.qa.base.TestBase.initialization(TestBase.java:57)
-	at com.qa.test.HomePageTest.setUp(HomePageTest.java:26)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+<h2>Default test</h2><h3 id="m0">com.qa.test.HomePageTest#setUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.appium.java_client.service.local.InvalidServerInstanceException: The main Appium script does not exist at &apos;C:\Users\PRAWIN\AppData\Roaming\npm\node_modules\appium\build\lib\main.js&apos;
+	at io.appium.java_client.service.local.AppiumServiceBuilder.findMainScript(AppiumServiceBuilder.java:161)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.loadPathToMainScript(AppiumServiceBuilder.java:300)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.createArgs(AppiumServiceBuilder.java:381)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:358)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:87)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildDefaultService(AppiumDriverLocalService.java:83)
+	at com.qa.base.TestBase.initialization(TestBase.java:44)
+	at com.qa.test.HomePageTest.setUp(HomePageTest.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
 	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:61)
 	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:366)
 	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:320)
 	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
 	at org.testng.TestRunner.privateRun(TestRunner.java:764)
 	at org.testng.TestRunner.run(TestRunner.java:585)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
@@ -79,108 +48,34 @@ Driver info: driver.version: AndroidDriver
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.reflect.InvocationTargetException
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
-	... 41 more
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot start the &apos;com.m.qr&apos; application. Visit https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md for troubleshooting. Original error: Error executing adbExec. Original error: &apos;Command &apos;&apos;D:\\Program Files\\Android\\asdk\\platform-tools\\adb.exe&apos; -P 5037 -s c1cbd64c shell am start -W -n com.m.qr/com.m.qr.activities.home.QRHomePageNew -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000&apos; exited with code 4294967295&apos;; Stderr: &apos;Security exception: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.m.qr/.activities.home.QRHomePageNew } from null (pid=22130, uid=2000) not exported from uid 10266
-
-java.lang.SecurityException: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.m.qr/.activities.home.QRHomePageNew } from null (pid=22130, uid=2000) not exported from uid 10266
-	at com.android.server.am.ActivityStackSupervisor.checkStartAnyActivityPermission(ActivityStackSupervisor.java:1630)
-	at com.android.server.am.ActivityStarter.startActivity(ActivityStarter.java:436)
-	at com.android.server.am.ActivityStarter.startActivityLocked(ActivityStarter.java:277)
-	at com.android.server.am.ActivityStarter.startActivityMayWait(ActivityStarter.java:829)
-	at com.android.server.am.ActivityManagerService.startActivityAndWait(ActivityManagerService.java:4710)
-	at com.android.server.am.ActivityManagerShellCommand.runStartActivity(ActivityManagerShellCommand.java:405)
-	at com.android.server.am.ActivityManagerShellCommand.onCommand(ActivityManagerShellCommand.java:141)
-	at android.os.ShellCommand.exec(ShellCommand.java:96)
-	at com.android.server.am.ActivityManagerService.onShellCommand(ActivityManagerService.java:15059)
-	at android.os.Binder.shellCommand(Binder.java:573)
-	at android.os.Binder.onTransact(Binder.java:473)
-	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:4256)
-	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:2983)
-	at android.os.Binder.execTransact(Binder.java:674)&apos;; Code: &apos;4294967295&apos; (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 19.88 seconds
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-PCEHKV8&apos;, ip: &apos;192.168.42.230&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
-	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
-	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	... 46 more
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.qa.test.HomePageTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.qa.test.HomePageTest#cartValueTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Cannot start the &apos;com.m.qr&apos; application. Visit https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md for troubleshooting. Original error: Error executing adbExec. Original error: &apos;Command &apos;&apos;D:\\Program Files\\Android\\asdk\\platform-tools\\adb.exe&apos; -P 5037 -s c1cbd64c shell am start -W -n com.m.qr/com.m.qr.activities.home.QRHomePageNew -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000&apos; exited with code 4294967295&apos;; Stderr: &apos;Security exception: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.m.qr/.activities.home.QRHomePageNew } from null (pid=22130, uid=2000) not exported from uid 10266
-
-java.lang.SecurityException: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.m.qr/.activities.home.QRHomePageNew } from null (pid=22130, uid=2000) not exported from uid 10266
-	at com.android.server.am.ActivityStackSupervisor.checkStartAnyActivityPermission(ActivityStackSupervisor.java:1630)
-	at com.android.server.am.ActivityStarter.startActivity(ActivityStarter.java:436)
-	at com.android.server.am.ActivityStarter.startActivityLocked(ActivityStarter.java:277)
-	at com.android.server.am.ActivityStarter.startActivityMayWait(ActivityStarter.java:829)
-	at com.android.server.am.ActivityManagerService.startActivityAndWait(ActivityManagerService.java:4710)
-	at com.android.server.am.ActivityManagerShellCommand.runStartActivity(ActivityManagerShellCommand.java:405)
-	at com.android.server.am.ActivityManagerShellCommand.onCommand(ActivityManagerShellCommand.java:141)
-	at android.os.ShellCommand.exec(ShellCommand.java:96)
-	at com.android.server.am.ActivityManagerService.onShellCommand(ActivityManagerService.java:15059)
-	at android.os.Binder.shellCommand(Binder.java:573)
-	at android.os.Binder.onTransact(Binder.java:473)
-	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:4256)
-	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:2983)
-	at android.os.Binder.execTransact(Binder.java:674)&apos;; Code: &apos;4294967295&apos; (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 19.88 seconds
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-PCEHKV8&apos;, ip: &apos;192.168.42.230&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
-Driver info: driver.version: AndroidDriver
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-PCEHKV8&apos;, ip: &apos;192.168.42.230&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:336)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:98)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:94)
-	at com.qa.base.TestBase.initialization(TestBase.java:57)
-	at com.qa.test.HomePageTest.setUp(HomePageTest.java:26)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+<h3 id="m1">com.qa.test.HomePageTest#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.qa.test.HomePageTest#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.qa.test.HomePageTest#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.qa.test.HomePageTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.qa.test.HomePageTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.qa.test.HomePageTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.qa.test.HomePageTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.qa.test.HomePageTest#cartValueTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.appium.java_client.service.local.InvalidServerInstanceException: The main Appium script does not exist at &apos;C:\Users\PRAWIN\AppData\Roaming\npm\node_modules\appium\build\lib\main.js&apos;
+	at io.appium.java_client.service.local.AppiumServiceBuilder.findMainScript(AppiumServiceBuilder.java:161)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.loadPathToMainScript(AppiumServiceBuilder.java:300)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.createArgs(AppiumServiceBuilder.java:381)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:358)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:87)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildDefaultService(AppiumDriverLocalService.java:83)
+	at com.qa.base.TestBase.initialization(TestBase.java:44)
+	at com.qa.test.HomePageTest.setUp(HomePageTest.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
 	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:61)
 	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:366)
 	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:320)
 	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
 	at org.testng.TestRunner.privateRun(TestRunner.java:764)
 	at org.testng.TestRunner.run(TestRunner.java:585)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
@@ -196,107 +91,27 @@ Driver info: driver.version: AndroidDriver
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.reflect.InvocationTargetException
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
-	... 41 more
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot start the &apos;com.m.qr&apos; application. Visit https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md for troubleshooting. Original error: Error executing adbExec. Original error: &apos;Command &apos;&apos;D:\\Program Files\\Android\\asdk\\platform-tools\\adb.exe&apos; -P 5037 -s c1cbd64c shell am start -W -n com.m.qr/com.m.qr.activities.home.QRHomePageNew -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000&apos; exited with code 4294967295&apos;; Stderr: &apos;Security exception: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.m.qr/.activities.home.QRHomePageNew } from null (pid=22130, uid=2000) not exported from uid 10266
-
-java.lang.SecurityException: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.m.qr/.activities.home.QRHomePageNew } from null (pid=22130, uid=2000) not exported from uid 10266
-	at com.android.server.am.ActivityStackSupervisor.checkStartAnyActivityPermission(ActivityStackSupervisor.java:1630)
-	at com.android.server.am.ActivityStarter.startActivity(ActivityStarter.java:436)
-	at com.android.server.am.ActivityStarter.startActivityLocked(ActivityStarter.java:277)
-	at com.android.server.am.ActivityStarter.startActivityMayWait(ActivityStarter.java:829)
-	at com.android.server.am.ActivityManagerService.startActivityAndWait(ActivityManagerService.java:4710)
-	at com.android.server.am.ActivityManagerShellCommand.runStartActivity(ActivityManagerShellCommand.java:405)
-	at com.android.server.am.ActivityManagerShellCommand.onCommand(ActivityManagerShellCommand.java:141)
-	at android.os.ShellCommand.exec(ShellCommand.java:96)
-	at com.android.server.am.ActivityManagerService.onShellCommand(ActivityManagerService.java:15059)
-	at android.os.Binder.shellCommand(Binder.java:573)
-	at android.os.Binder.onTransact(Binder.java:473)
-	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:4256)
-	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:2983)
-	at android.os.Binder.execTransact(Binder.java:674)&apos;; Code: &apos;4294967295&apos; (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 19.88 seconds
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-PCEHKV8&apos;, ip: &apos;192.168.42.230&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
-	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
-	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	... 46 more
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.qa.test.HomePageTest#crmLogoImageTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Cannot start the &apos;com.m.qr&apos; application. Visit https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md for troubleshooting. Original error: Error executing adbExec. Original error: &apos;Command &apos;&apos;D:\\Program Files\\Android\\asdk\\platform-tools\\adb.exe&apos; -P 5037 -s c1cbd64c shell am start -W -n com.m.qr/com.m.qr.activities.home.QRHomePageNew -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000&apos; exited with code 4294967295&apos;; Stderr: &apos;Security exception: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.m.qr/.activities.home.QRHomePageNew } from null (pid=22130, uid=2000) not exported from uid 10266
-
-java.lang.SecurityException: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.m.qr/.activities.home.QRHomePageNew } from null (pid=22130, uid=2000) not exported from uid 10266
-	at com.android.server.am.ActivityStackSupervisor.checkStartAnyActivityPermission(ActivityStackSupervisor.java:1630)
-	at com.android.server.am.ActivityStarter.startActivity(ActivityStarter.java:436)
-	at com.android.server.am.ActivityStarter.startActivityLocked(ActivityStarter.java:277)
-	at com.android.server.am.ActivityStarter.startActivityMayWait(ActivityStarter.java:829)
-	at com.android.server.am.ActivityManagerService.startActivityAndWait(ActivityManagerService.java:4710)
-	at com.android.server.am.ActivityManagerShellCommand.runStartActivity(ActivityManagerShellCommand.java:405)
-	at com.android.server.am.ActivityManagerShellCommand.onCommand(ActivityManagerShellCommand.java:141)
-	at android.os.ShellCommand.exec(ShellCommand.java:96)
-	at com.android.server.am.ActivityManagerService.onShellCommand(ActivityManagerService.java:15059)
-	at android.os.Binder.shellCommand(Binder.java:573)
-	at android.os.Binder.onTransact(Binder.java:473)
-	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:4256)
-	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:2983)
-	at android.os.Binder.execTransact(Binder.java:674)&apos;; Code: &apos;4294967295&apos; (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 19.88 seconds
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-PCEHKV8&apos;, ip: &apos;192.168.42.230&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
-Driver info: driver.version: AndroidDriver
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-PCEHKV8&apos;, ip: &apos;192.168.42.230&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:336)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:98)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:94)
-	at com.qa.base.TestBase.initialization(TestBase.java:57)
-	at com.qa.test.HomePageTest.setUp(HomePageTest.java:26)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+<h3 id="m9">com.qa.test.HomePageTest#crmLogoImageTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.appium.java_client.service.local.InvalidServerInstanceException: The main Appium script does not exist at &apos;C:\Users\PRAWIN\AppData\Roaming\npm\node_modules\appium\build\lib\main.js&apos;
+	at io.appium.java_client.service.local.AppiumServiceBuilder.findMainScript(AppiumServiceBuilder.java:161)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.loadPathToMainScript(AppiumServiceBuilder.java:300)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.createArgs(AppiumServiceBuilder.java:381)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:358)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:87)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildDefaultService(AppiumDriverLocalService.java:83)
+	at com.qa.base.TestBase.initialization(TestBase.java:44)
+	at com.qa.test.HomePageTest.setUp(HomePageTest.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
 	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:61)
 	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:366)
 	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:320)
 	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
 	at org.testng.TestRunner.privateRun(TestRunner.java:764)
 	at org.testng.TestRunner.run(TestRunner.java:585)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
@@ -312,107 +127,27 @@ Driver info: driver.version: AndroidDriver
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.reflect.InvocationTargetException
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
-	... 41 more
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot start the &apos;com.m.qr&apos; application. Visit https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md for troubleshooting. Original error: Error executing adbExec. Original error: &apos;Command &apos;&apos;D:\\Program Files\\Android\\asdk\\platform-tools\\adb.exe&apos; -P 5037 -s c1cbd64c shell am start -W -n com.m.qr/com.m.qr.activities.home.QRHomePageNew -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000&apos; exited with code 4294967295&apos;; Stderr: &apos;Security exception: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.m.qr/.activities.home.QRHomePageNew } from null (pid=22130, uid=2000) not exported from uid 10266
-
-java.lang.SecurityException: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.m.qr/.activities.home.QRHomePageNew } from null (pid=22130, uid=2000) not exported from uid 10266
-	at com.android.server.am.ActivityStackSupervisor.checkStartAnyActivityPermission(ActivityStackSupervisor.java:1630)
-	at com.android.server.am.ActivityStarter.startActivity(ActivityStarter.java:436)
-	at com.android.server.am.ActivityStarter.startActivityLocked(ActivityStarter.java:277)
-	at com.android.server.am.ActivityStarter.startActivityMayWait(ActivityStarter.java:829)
-	at com.android.server.am.ActivityManagerService.startActivityAndWait(ActivityManagerService.java:4710)
-	at com.android.server.am.ActivityManagerShellCommand.runStartActivity(ActivityManagerShellCommand.java:405)
-	at com.android.server.am.ActivityManagerShellCommand.onCommand(ActivityManagerShellCommand.java:141)
-	at android.os.ShellCommand.exec(ShellCommand.java:96)
-	at com.android.server.am.ActivityManagerService.onShellCommand(ActivityManagerService.java:15059)
-	at android.os.Binder.shellCommand(Binder.java:573)
-	at android.os.Binder.onTransact(Binder.java:473)
-	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:4256)
-	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:2983)
-	at android.os.Binder.execTransact(Binder.java:674)&apos;; Code: &apos;4294967295&apos; (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 19.88 seconds
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-PCEHKV8&apos;, ip: &apos;192.168.42.230&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
-	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
-	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	... 46 more
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.qa.test.HomePageTest#homePageTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Cannot start the &apos;com.m.qr&apos; application. Visit https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md for troubleshooting. Original error: Error executing adbExec. Original error: &apos;Command &apos;&apos;D:\\Program Files\\Android\\asdk\\platform-tools\\adb.exe&apos; -P 5037 -s c1cbd64c shell am start -W -n com.m.qr/com.m.qr.activities.home.QRHomePageNew -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000&apos; exited with code 4294967295&apos;; Stderr: &apos;Security exception: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.m.qr/.activities.home.QRHomePageNew } from null (pid=22130, uid=2000) not exported from uid 10266
-
-java.lang.SecurityException: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.m.qr/.activities.home.QRHomePageNew } from null (pid=22130, uid=2000) not exported from uid 10266
-	at com.android.server.am.ActivityStackSupervisor.checkStartAnyActivityPermission(ActivityStackSupervisor.java:1630)
-	at com.android.server.am.ActivityStarter.startActivity(ActivityStarter.java:436)
-	at com.android.server.am.ActivityStarter.startActivityLocked(ActivityStarter.java:277)
-	at com.android.server.am.ActivityStarter.startActivityMayWait(ActivityStarter.java:829)
-	at com.android.server.am.ActivityManagerService.startActivityAndWait(ActivityManagerService.java:4710)
-	at com.android.server.am.ActivityManagerShellCommand.runStartActivity(ActivityManagerShellCommand.java:405)
-	at com.android.server.am.ActivityManagerShellCommand.onCommand(ActivityManagerShellCommand.java:141)
-	at android.os.ShellCommand.exec(ShellCommand.java:96)
-	at com.android.server.am.ActivityManagerService.onShellCommand(ActivityManagerService.java:15059)
-	at android.os.Binder.shellCommand(Binder.java:573)
-	at android.os.Binder.onTransact(Binder.java:473)
-	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:4256)
-	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:2983)
-	at android.os.Binder.execTransact(Binder.java:674)&apos;; Code: &apos;4294967295&apos; (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 19.88 seconds
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-PCEHKV8&apos;, ip: &apos;192.168.42.230&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
-Driver info: driver.version: AndroidDriver
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-PCEHKV8&apos;, ip: &apos;192.168.42.230&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:336)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:98)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:94)
-	at com.qa.base.TestBase.initialization(TestBase.java:57)
-	at com.qa.test.HomePageTest.setUp(HomePageTest.java:26)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+<h3 id="m10">com.qa.test.HomePageTest#homePageTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.appium.java_client.service.local.InvalidServerInstanceException: The main Appium script does not exist at &apos;C:\Users\PRAWIN\AppData\Roaming\npm\node_modules\appium\build\lib\main.js&apos;
+	at io.appium.java_client.service.local.AppiumServiceBuilder.findMainScript(AppiumServiceBuilder.java:161)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.loadPathToMainScript(AppiumServiceBuilder.java:300)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.createArgs(AppiumServiceBuilder.java:381)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:358)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:87)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildDefaultService(AppiumDriverLocalService.java:83)
+	at com.qa.base.TestBase.initialization(TestBase.java:44)
+	at com.qa.test.HomePageTest.setUp(HomePageTest.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
 	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:61)
 	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:366)
 	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:320)
 	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
 	at org.testng.TestRunner.privateRun(TestRunner.java:764)
 	at org.testng.TestRunner.run(TestRunner.java:585)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
@@ -428,55 +163,6 @@ Driver info: driver.version: AndroidDriver
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.reflect.InvocationTargetException
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
-	... 41 more
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot start the &apos;com.m.qr&apos; application. Visit https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md for troubleshooting. Original error: Error executing adbExec. Original error: &apos;Command &apos;&apos;D:\\Program Files\\Android\\asdk\\platform-tools\\adb.exe&apos; -P 5037 -s c1cbd64c shell am start -W -n com.m.qr/com.m.qr.activities.home.QRHomePageNew -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000&apos; exited with code 4294967295&apos;; Stderr: &apos;Security exception: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.m.qr/.activities.home.QRHomePageNew } from null (pid=22130, uid=2000) not exported from uid 10266
-
-java.lang.SecurityException: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.m.qr/.activities.home.QRHomePageNew } from null (pid=22130, uid=2000) not exported from uid 10266
-	at com.android.server.am.ActivityStackSupervisor.checkStartAnyActivityPermission(ActivityStackSupervisor.java:1630)
-	at com.android.server.am.ActivityStarter.startActivity(ActivityStarter.java:436)
-	at com.android.server.am.ActivityStarter.startActivityLocked(ActivityStarter.java:277)
-	at com.android.server.am.ActivityStarter.startActivityMayWait(ActivityStarter.java:829)
-	at com.android.server.am.ActivityManagerService.startActivityAndWait(ActivityManagerService.java:4710)
-	at com.android.server.am.ActivityManagerShellCommand.runStartActivity(ActivityManagerShellCommand.java:405)
-	at com.android.server.am.ActivityManagerShellCommand.onCommand(ActivityManagerShellCommand.java:141)
-	at android.os.ShellCommand.exec(ShellCommand.java:96)
-	at com.android.server.am.ActivityManagerService.onShellCommand(ActivityManagerService.java:15059)
-	at android.os.Binder.shellCommand(Binder.java:573)
-	at android.os.Binder.onTransact(Binder.java:473)
-	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:4256)
-	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:2983)
-	at android.os.Binder.execTransact(Binder.java:674)&apos;; Code: &apos;4294967295&apos; (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 19.88 seconds
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-PCEHKV8&apos;, ip: &apos;192.168.42.230&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
-	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
-	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	... 46 more
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

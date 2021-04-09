@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 30, Failures: 3, Errors: 0, Skipped: 27, Time elapsed: 2.889 s <<< FAILURE! - in TestSuite
+setUp(com.qa.test.ItemsPageTest)  Time elapsed: 1.645 s  <<< FAILURE!
+io.appium.java_client.service.local.InvalidServerInstanceException: The main Appium script does not exist at 'C:\Users\PRAWIN\AppData\Roaming\npm\node_modules\appium\build\lib\main.js'
+	at com.qa.test.ItemsPageTest.setUp(ItemsPageTest.java:35)
+
+setUp(com.qa.test.CategoryPageTest)  Time elapsed: 2.185 s  <<< FAILURE!
+io.appium.java_client.service.local.InvalidServerInstanceException: The main Appium script does not exist at 'C:\Users\PRAWIN\AppData\Roaming\npm\node_modules\appium\build\lib\main.js'
+	at com.qa.test.CategoryPageTest.setUp(CategoryPageTest.java:34)
+
+setUp(com.qa.test.HomePageTest)  Time elapsed: 2.792 s  <<< FAILURE!
+io.appium.java_client.service.local.InvalidServerInstanceException: The main Appium script does not exist at 'C:\Users\PRAWIN\AppData\Roaming\npm\node_modules\appium\build\lib\main.js'
+	at com.qa.test.HomePageTest.setUp(HomePageTest.java:31)
+

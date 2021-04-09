@@ -1,5 +1,9 @@
 package com.qa.test;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 import java.net.MalformedURLException;
 
@@ -24,6 +28,7 @@ public class CategoryPageTest extends TestBase{
 		// TODO Auto-generated constructor stub
 	}
 	
+	@BeforeMethod
 	@BeforeClass
 	public void setUp() throws IOException, InterruptedException{
 		initialization();
@@ -35,7 +40,7 @@ public class CategoryPageTest extends TestBase{
 	@Test(priority=1)
 	public void pageTitleTest(){
 		String pageTitle = categoryPage.verifyCategoryPageTitle();
-		Assert.assertEquals(pageTitle, "Explore all Categories","Title displayed doesn't match");
+		AssertJUnit.assertEquals(pageTitle, "Explore all Categories","Title displayed doesn't match");
 	}
 	
 	
@@ -45,6 +50,7 @@ public class CategoryPageTest extends TestBase{
 	}
 	
 	
+	@AfterMethod
 	@AfterClass
 	public void tearDown(){
 		//driver.quit();

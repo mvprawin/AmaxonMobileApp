@@ -5,30 +5,36 @@
   <version>0.0.1-SNAPSHOT</version>
   
 	<properties>
+			<jre.level>1.8.0_191</jre.level>
+		<jdk.level>1.8.0_191</jdk.level>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<build>
 		<plugins>
-
-			<plugin>
+					<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.18.1</version>
+				<version>2.22.2</version>
 				<configuration>
-					<forkCount>0</forkCount>
 					<suiteXmlFiles>
+						<!-- TestNG suite XML files -->
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
+		
+<!-- Compiler plug-in -->
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
 				<configuration>
-					<fork>true</fork>
-					<executable>C:\Program Files\Java\jdk1.8.0_144\bin\javac.exe</executable>
+					<executable>D:\Program Files\Java\jdk1.8.0_191\bin\javac.exe</executable>
 				</configuration>
 			</plugin>
+			<!-- Below plug-in is used to execute tests -->
+
+
 		</plugins>
 		</build>
 			

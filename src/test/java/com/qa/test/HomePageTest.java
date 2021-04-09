@@ -1,5 +1,9 @@
 package com.qa.test;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 import java.net.MalformedURLException;
 
@@ -21,6 +25,7 @@ public class HomePageTest extends TestBase{
 		// TODO Auto-generated constructor stub
 	}
 	
+	@BeforeMethod
 	@BeforeClass
 	public void setUp() throws IOException, InterruptedException{
 		initialization();
@@ -32,13 +37,13 @@ public class HomePageTest extends TestBase{
 	@Test(priority=1)
 	public void crmLogoImageTest(){
 		boolean flag = homePage.validateLogoImg();
-		Assert.assertTrue(flag);
+		AssertJUnit.assertTrue(flag);
 	}
 	
 	@Test(priority=2)
 	public void cartValueTest() throws InterruptedException{
 		String cartValue = homePage.cartCount();
-		Assert.assertEquals(cartValue, "9","Cart count not matched");
+		AssertJUnit.assertEquals(cartValue, "9","Cart count not matched");
 	}
 	
 	@Test(priority=3)
@@ -49,13 +54,14 @@ public class HomePageTest extends TestBase{
 	
 	public void homePagecheck() throws IOException, InterruptedException{
 		String value = homePage.itemSearch(prop.getProperty("search"));
-		Assert.assertEquals(value.contains("Nivia Storm Football"),"Result not matched");
+		AssertJUnit.assertEquals(value.contains("Nivia Storm Football"),"Result not matched");
 	}
 	
 	
 	
 	
 	
+	@AfterMethod
 	@AfterClass
 	public void tearDown(){
 		//driver.quit();

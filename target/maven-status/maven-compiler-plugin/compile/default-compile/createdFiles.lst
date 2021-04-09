@@ -1,0 +1,6 @@
+com\qa\pages\BrandPage.class
+com\qa\pages\CategoryPage.class
+com\qa\pages\ItemsPage.class
+com\qa\pages\HomePage.class
+com\qa\base\TestBase.class
+com\qa\utils\TestUtils.class
